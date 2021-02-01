@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       
         <Container >
-
+      <div id="todoLogo"></div>
        <h1 style={{textDecoration:"underLine"}}>Enter new note:</h1>
           <NewNote />
           

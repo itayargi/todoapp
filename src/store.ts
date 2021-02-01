@@ -67,7 +67,6 @@ export class NoteStore {
                 done: false,
                 
             });
-            localStorage.setItem("notes", JSON.stringify(this.notes));
         }
     }
 

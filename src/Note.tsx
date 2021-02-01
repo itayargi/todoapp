@@ -33,11 +33,12 @@ export default class Note extends React.Component<INote, IState> {
     }
 
     public addTodo = () => {
+        (document.getElementById("imputAddTodo") as HTMLInputElement).value=""
+
         this.injected.noteStore.addToDo({
             noteId: this.props.id, 
             todoTitle: this.state.inputField 
         });
-            
             }
      
     
@@ -45,7 +46,7 @@ export default class Note extends React.Component<INote, IState> {
 
     public render() {
         return (
-            <Card style={{float:'left', marginLeft:10}}>
+            <Card style={{width:"100%", marginLeft:10, minWidth:200}}>
                 <Card.Content header={this.props.name} />
                 <Card.Content extra>
                     <div>Created at: {dayjs(this.props.creationDate).format("D/MM/YY HH:mm:ss")}</div>

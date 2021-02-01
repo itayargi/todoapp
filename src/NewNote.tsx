@@ -33,12 +33,14 @@ export default class NewNote extends React.Component<IProps, IState> {
 
     public addNoteToStore = () => {
         this.injected.noteStore.addNote(this.state.inputValue);
+        (document.getElementById("newNote") as HTMLInputElement).value=""
+
     }
 
     public render() {
         return (
             <div>
-                <Input type="text" onChange={this.handleChange} />
+                <Input id="newNote" type="text" onChange={this.handleChange} placeholder="add note" />
                 <Button style={{marginLeft:5}} primary onClick={this.addNoteToStore}>Add Note</Button>
             </div>
         )

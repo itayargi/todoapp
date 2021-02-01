@@ -1,7 +1,16 @@
 .App{
-  background-image: url('note.jpg');
+  background-image: url('background.jpg');
   height:100%;
   background-size: 100%;
   min-height: 100vh;
+  text-align: center;
+  background-position: center;
+}
 
+#todoLogo{
+  background-image: url('todo.png');
+  height: 60px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
